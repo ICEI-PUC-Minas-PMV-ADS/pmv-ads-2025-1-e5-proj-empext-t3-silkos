@@ -97,13 +97,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ![image](https://github.com/user-attachments/assets/9ba6f75d-1886-45ae-8217-d66ceb6ff34f)
 
-
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
+Diagrama criado via ![draw.io](http://draw.io/)
 
 ## Projeto da Base de Dados
 
