@@ -1,9 +1,6 @@
 # Especificações do Projeto
 
- O grande problema a ser tratado é a ineficiência operacional da empresa devido a processos manuais e descentralizados na precificação, orçamentação e organização de pedidos e serviços ao qual buscaremos tratar com a automatização do cálculo de orçamentos, centralização da organização de pedidos e serviços, em resumo, o SilkOS busca resolver o problema da ineficiência operacional através de:
-
->Automação: Reduzindo a dependência de processos manuais e propensos a erros.
->Centralização: Organizando e consolidando informações em um único sistema.
+ O grande problema a ser tratado é a ineficiência operacional da empresa devido a processos manuais e descentralizados na precificação, orçamentação e organização de pedidos e serviços ao qual buscaremos tratar com a automatização do cálculo de orçamentos, centralização da organização de pedidos e serviços, em resumo, o SilkOS busca resolver o problema da ineficiência operacional através da Automação, reduzindo a dependência de processos manuais e propensos a erros, e da centralização, Organizando e consolidando informações em um único sistema.
 
 ## Usuários
 | Tipo de Usuário   | Descrição | Responsabilidades |
