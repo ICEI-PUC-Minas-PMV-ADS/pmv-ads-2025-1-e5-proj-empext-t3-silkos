@@ -97,7 +97,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ![image](https://github.com/user-attachments/assets/9ba6f75d-1886-45ae-8217-d66ceb6ff34f)
 
-Diagrama criado via ![draw.io](http://draw.io/)
+Diagrama criado via -[draw.io](http://draw.io/)
 
 ## Projeto da Base de Dados
 
