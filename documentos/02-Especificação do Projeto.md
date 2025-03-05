@@ -9,7 +9,7 @@
 
 ## Arquitetura e Tecnologias
 
-Descreva brevemente a arquitetura definida para o projeto e as tecnologias a serem utilizadas. 
+A arquitetura do projeto SilkOS foi concebida para ser modular, escalável e de fácil manutenção, visando atender às necessidades específicas do nosso cliente que possui uma empresa no setor de personalização de produtos, para a criação dessa solução está sendo utilizanda as tecnologias de react, Javascript e o banco de dados MongoDB. 
 
 ![image](https://github.com/user-attachments/assets/1fcc6f15-48c0-4880-af6d-a72ccdd0a46c)
 
