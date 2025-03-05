@@ -5,8 +5,7 @@
 ## Usuários
 | Tipo de Usuário   | Descrição | Responsabilidades |
 |------------------|-----------|------------------|
-| administrador/funcionário | Gerencia e utiliza a aplicação com foco em soluções de otimização de processos mais especificamente no setor de personalização de produtos. | Entender as necessidades de PMEs no setor de personalização,
-propor soluções tecnológicas para otimizar seus processos e possuir uma visão estratégica e foco em resultados. |
+| administrador/funcionário | Gerencia e utiliza a aplicação com foco em soluções de otimização de processos mais especificamente no setor de personalização de produtos. | Entender as necessidades de PMEs no setor de personalização, propor soluções tecnológicas para otimizar seus processos e possuir uma visão estratégica e foco em resultados. |
 
 ## Arquitetura e Tecnologias
 
