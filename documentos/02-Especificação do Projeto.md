@@ -5,15 +5,8 @@
 ## Usuários
 | Tipo de Usuário   | Descrição | Responsabilidades |
 |------------------|-----------|------------------|
-| **xxx** | xxxxx | xxxxx |
-
-### Exemplo
-
-| Tipo de Usuário   | Descrição | Responsabilidades |
-|------------------|-----------|------------------|
-| **Administrador** | Gerencia a aplicação e os usuários. | Gerenciar usuários, configurar o sistema, acessar todos os relatórios. |
-| **Funcionário** | Usa a aplicação para suas tarefas principais. | Criar e editar registros, visualizar relatórios. |
-
+| administrador/funcionário | Gerencia e utiliza a aplicação com foco em soluções de otimização de processos mais especificamente no setor de personalização de produtos. | Entender as necessidades de PMEs no setor de personalização,
+propor soluções tecnológicas para otimizar seus processos e possuir uma visão estratégica e foco em resultados. |
 
 ## Arquitetura e Tecnologias
 
