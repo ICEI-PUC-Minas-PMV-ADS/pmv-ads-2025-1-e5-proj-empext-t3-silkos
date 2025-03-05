@@ -9,7 +9,9 @@
 
 ## Arquitetura e Tecnologias
 
-Descreva brevemente a arquitetura definida para o projeto e as tecnologias a serem utilizadas. Sugere-se a criação de um diagrama de componentes da solução.
+Descreva brevemente a arquitetura definida para o projeto e as tecnologias a serem utilizadas. 
+
+![image](https://github.com/user-attachments/assets/1fcc6f15-48c0-4880-af6d-a72ccdd0a46c)
 
 ## Project Model Canvas
 
