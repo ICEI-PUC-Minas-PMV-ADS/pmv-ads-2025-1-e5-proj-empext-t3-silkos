@@ -37,17 +37,40 @@ Para mais informações, consulte os microfundamentos Fundamentos de Engenharia 
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
 
-### Requisitos não Funcionais
+| ID       | Descrição do Requisito                                                   | Prioridade |
+|----------|---------------------------------------------------------------------------|------------|
+| **RF-001** | O sistema deve permitir o cadastro de clientes com nome, e-mail e telefone. | ALTA |
+| **RF-002** | O sistema deve permitir o cadastro de serviços de vetorização e estampas. | ALTA |
+| **RF-003** | O sistema deve permitir a edição e exclusão de serviços cadastrados. | ALTA |
+| **RF-004** | O sistema deve permitir a criação de orçamentos com base na quantidade de cores e peças. | ALTA |
+| **RF-005** | O sistema deve permitir a geração de recibos para os clientes. | ALTA |
+| **RF-006** | O sistema deve permitir a pesquisa de serviços e clientes cadastrados. | MÉDIA |
+| **RF-007** | O sistema deve permitir a edição de valores para vetorização e estampas. | MÉDIA |
+| **RF-008** | O sistema deve permitir a exportação de orçamentos para PDF. | MÉDIA |
+| **RF-009** | O sistema deve permitir a definição de um período para filtrar os recibos emitidos. | MÉDIA |
+| **RF-010** | O sistema deve possuir botões de ação para editar e excluir registros na tabela de serviços. | ALTA |
+| **RF-011** | O sistema deve permitir o cadastro de login e senha para o supervisor da empresa. | ALTA |
+| **RF-012** | O sistema deve possuir uma funcionalidade de recuperação de senha caso o supervisor a perca. | ALTA |
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+---
+
+## **Requisitos Não Funcionais**
+
+| ID       | Descrição do Requisito                                                  | Prioridade |
+|----------|--------------------------------------------------------------------------|------------|
+| **RNF-001** | O sistema deve ser responsivo para funcionar em dispositivos móveis. | ALTA |
+| **RNF-002** | O sistema deve possuir um design intuitivo e de fácil usabilidade. | ALTA |
+| **RNF-003** | O tempo de resposta para ações como salvar, editar e excluir deve ser inferior a 2 segundos. | MÉDIA |
+| **RNF-004** | O sistema deve armazenar os dados em um banco de dados MySQL. | ALTA |
+| **RNF-005** | O sistema deve permitir múltiplos usuários simultaneamente sem comprometer o desempenho. | MÉDIA |
+| **RNF-006** | Os dados devem ser protegidos contra acessos não autorizados. | ALTA |
+| **RNF-007** | O sistema deve permitir a geração de arquivos PDF de recibos e orçamentos sem perda de formatação. | MÉDIA |
+| **RNF-008** | O sistema deve garantir a segurança do login do supervisor com criptografia de senha. | ALTA |
+
+---
+
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
