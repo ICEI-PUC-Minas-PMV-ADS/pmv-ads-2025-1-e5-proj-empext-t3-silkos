@@ -15,11 +15,7 @@ A arquitetura do projeto SilkOS foi concebida para ser modular, escalável e de 
 
 ## Project Model Canvas
 
-Deve ser desenvolvido a partir do microfundamento: Empreendedorismo e inovação.
-Colocar a imagem do modelo construído apresentando a proposta de solução.
-
-> **Links Úteis**:
-> Disponíveis em material de apoio do projeto
+![image](https://github.com/user-attachments/assets/c28a30db-7f30-4133-af6a-166c49067c70)
 
 ## Requisitos
 
