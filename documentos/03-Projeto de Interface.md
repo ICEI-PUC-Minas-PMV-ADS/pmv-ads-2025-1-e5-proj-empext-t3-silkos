@@ -7,4 +7,4 @@ Este projeto possui um protótipo interativo desenvolvido no Figma, onde é poss
 
 Você pode acessar diretamente o protótipo pelo link abaixo ou visualizar via iframe se estiver em uma plataforma que suporte essa funcionalidade.
 
-🔗 [Acessar no Figma](https://www.figma.com/proto/E4Wx38qipwqRRvKFM7mURm/SilkOS?page-id=0%3A1&node-id=58-35&p=f&viewport=707%2C427%2C0.09&scaling=scale-down&content-scaling=fixed&starting-point-node-id=58%3A35&embed-host=share)
+🔗 [Acessar no Figma](https://embed.figma.com/proto/E4Wx38qipwqRRvKFM7mURm/SilkOS?page-id=0%3A1&node-id=61-451&viewport=707%2C427%2C0.09&scaling=scale-down&content-scaling=fixed&starting-point-node-id=58%3A35&embed-host=share)
