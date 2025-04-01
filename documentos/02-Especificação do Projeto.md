@@ -98,7 +98,8 @@ Diagrama criado via [draw.io](http://draw.io/)
 
 ## Projeto da Base de Dados - SilkOS
 
-![image](https://github.com/user-attachments/assets/8f8b253e-fbbf-4ab5-a1d3-2abe6341c6e9)
+![image](https://github.com/user-attachments/assets/114f5276-27af-41d9-a25f-01a153c16203)
+
 
 ## 1. Estrutura do Banco de Dados
 A base de dados do **SilkOS** é composta pelas seguintes coleções:
@@ -117,8 +118,8 @@ Armazena os dados dos usuários do sistema.
 }
 ```
 
-### 1.2. Coleção `Cliente`
-Registra informações dos clientes que solicitam serviços.
+### 1.3. Coleção `Servico`
+Armazena os serviços prestados aos clientes.
 
 #### Exemplo de Documento:
 ```json
@@ -127,17 +128,6 @@ Registra informações dos clientes que solicitam serviços.
   "nome": "Maria Souza",
   "email": "maria@email.com",
   "celular": "(11) 99999-9999"
-}
-```
-
-### 1.3. Coleção `Servico`
-Armazena os serviços prestados aos clientes.
-
-#### Exemplo de Documento:
-```json
-{
-  "_id": ObjectId("..."),
-  "nome": "Impressão Digital",
   "servico1": "Sublimação",
   "servico2": "Transfer Laser",
   "qtdCor": 4,
