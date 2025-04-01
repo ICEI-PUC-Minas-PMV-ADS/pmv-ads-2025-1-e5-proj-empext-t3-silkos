@@ -98,7 +98,8 @@ Diagrama criado via [draw.io](http://draw.io/)
 
 ## Projeto da Base de Dados - SilkOS
 
-![projeto da base de dados](https://github.com/user-attachments/assets/ec595fc8-b013-48c8-b689-12c49ea79c51)
+![image](https://github.com/user-attachments/assets/8f8b253e-fbbf-4ab5-a1d3-2abe6341c6e9)
+
 
 ## 1. Estrutura do Banco de Dados
 A base de dados do **SilkOS** é composta por duas coleções principais: `Servico` e `User`.
