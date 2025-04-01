@@ -100,50 +100,104 @@ Diagrama criado via [draw.io](http://draw.io/)
 
 ![image](https://github.com/user-attachments/assets/8f8b253e-fbbf-4ab5-a1d3-2abe6341c6e9)
 
-
 ## 1. Estrutura do Banco de Dados
-A base de dados do **SilkOS** é composta por duas coleções principais: `Servico` e `User`.
+A base de dados do **SilkOS** é composta pelas seguintes coleções:
 
-### 1.1. Coleção `Servico`
-Armazena os serviços prestados a clientes.
-
-#### Campos:
-- `id` (String) - Identificador único do serviço.
-- `cliente` (String) - Nome ou referência ao cliente.
-- `data` (DateTime) - Data do serviço.
-- `servico1` (String) - Descrição principal do serviço.
-- `servico2` (String?) - Descrição opcional do serviço.
-- `valor` (Float) - Preço do serviço.
+### 1.1. Coleção `User`
+Armazena os dados dos usuários do sistema.
 
 #### Exemplo de Documento:
 ```json
 {
-  "id": "660d3b2f9c1e3a0015b5e3a1",
-  "cliente": "Maria Souza",
-  "data": "2025-03-31T12:00:00Z",
-  "servico1": "Personalização de Camiseta",
-  "servico2": "Ajuste de Design",
-  "valor": 150.50
-}
-```
-
-### 1.2. Coleção `User`
-Armazena os usuários do sistema.
-
-#### Campos:
-- `id` (String) - Identificador único do usuário.
-- `createdAt` (DateTime) - Data de criação do usuário.
-- `email` (String) - Email único, usado para login.
-- `name` (String) - Nome do usuário.
-- `password` (String) - Hash da senha do usuário.
-
-#### Exemplo de Documento:
-```json
-{
-  "id": "660d3b2f9c1e3a0015b5e3b2",
-  "createdAt": "2025-03-31T12:00:00Z",
-  "email": "joao@email.com",
+  "_id": ObjectId("..."),
+  "createdAt": ISODate("2025-03-31T12:00:00Z"),
+  "email": "usuario@email.com",
   "name": "João Silva",
   "password": "hash_senha"
 }
 ```
+
+### 1.2. Coleção `Cliente`
+Registra informações dos clientes que solicitam serviços.
+
+#### Exemplo de Documento:
+```json
+{
+  "_id": ObjectId("..."),
+  "nome": "Maria Souza",
+  "email": "maria@email.com",
+  "celular": "(11) 99999-9999"
+}
+```
+
+### 1.3. Coleção `Servico`
+Armazena os serviços prestados aos clientes.
+
+#### Exemplo de Documento:
+```json
+{
+  "_id": ObjectId("..."),
+  "nome": "Impressão Digital",
+  "servico1": "Sublimação",
+  "servico2": "Transfer Laser",
+  "qtdCor": 4,
+  "qtdPeças": 10,
+  "data": ISODate("2025-03-31T12:00:00Z")
+}
+```
+
+### 1.4. Coleção `Valores`
+Contém os valores de serviços com base na complexidade e características do trabalho.
+
+#### Exemplo de Documento:
+```json
+{
+  "_id": ObjectId("..."),
+  "vSimples": 50.00,
+  "vMediana": 75.00,
+  "vComplexo": 120.00,
+  "layout": 30.00,
+  "sepCor": 15.00,
+  "vlrQtdCor": 10.00
+}
+```
+
+## 2. Relacionamentos
+- `Servico` pode estar vinculado a um `Cliente` caso os serviços sejam personalizados para clientes específicos.
+- `User` gerencia os `Servicos` cadastrados no sistema.
+- `Valores` são utilizados para precificar os serviços cadastrados em `Servico`.
+
+## 3. Índices e Otimização
+Para melhorar a eficiência do banco de dados, os seguintes índices serão criados:
+- `User.email` (único) para garantir autenticação rápida.
+- `Cliente.email` para facilitar buscas.
+- `Servico.nome` para consultas eficientes de serviços disponíveis.
+
+## 4. Regras de Validação
+Utilizando **JSON Schema Validation**, podemos garantir a integridade dos dados. Exemplo para `User`:
+```json
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["email", "name", "password"],
+    "properties": {
+      "email": { "bsonType": "string", "pattern": "^.+@.+$", "description": "Email válido" },
+      "name": { "bsonType": "string", "description": "Nome do usuário" },
+      "password": { "bsonType": "string", "description": "Hash da senha" }
+    }
+  }
+}
+```
+
+## 5. Exemplos de Consultas
+
+### Buscar serviços cadastrados:
+```javascript
+db.servico.find({})
+```
+
+### Listar clientes pelo email:
+```javascript
+db.cliente.find({ email: "maria@email.com" })
+```
+
