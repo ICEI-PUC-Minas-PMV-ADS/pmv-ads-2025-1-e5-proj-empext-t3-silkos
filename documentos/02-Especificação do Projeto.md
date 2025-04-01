@@ -95,8 +95,53 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 Diagrama criado via [draw.io](http://draw.io/)
 
-## Projeto da Base de Dados
+## Projeto da Base de Dados - SilkOS
 
 ![projeto da base de dados](https://github.com/user-attachments/assets/ec595fc8-b013-48c8-b689-12c49ea79c51)
 
+## 1. Estrutura do Banco de Dados
+A base de dados do **SilkOS** é composta por duas coleções principais: `Servico` e `User`.
 
+### 1.1. Coleção `Servico`
+Armazena os serviços prestados a clientes.
+
+#### Campos:
+- `id` (String) - Identificador único do serviço.
+- `cliente` (String) - Nome ou referência ao cliente.
+- `data` (DateTime) - Data do serviço.
+- `servico1` (String) - Descrição principal do serviço.
+- `servico2` (String?) - Descrição opcional do serviço.
+- `valor` (Float) - Preço do serviço.
+
+#### Exemplo de Documento:
+```json
+{
+  "id": "660d3b2f9c1e3a0015b5e3a1",
+  "cliente": "Maria Souza",
+  "data": "2025-03-31T12:00:00Z",
+  "servico1": "Personalização de Camiseta",
+  "servico2": "Ajuste de Design",
+  "valor": 150.50
+}
+```
+
+### 2.2. Coleção `User`
+Armazena os usuários do sistema.
+
+#### Campos:
+- `id` (String) - Identificador único do usuário.
+- `createdAt` (DateTime) - Data de criação do usuário.
+- `email` (String) - Email único, usado para login.
+- `name` (String) - Nome do usuário.
+- `password` (String) - Hash da senha do usuário.
+
+#### Exemplo de Documento:
+```json
+{
+  "id": "660d3b2f9c1e3a0015b5e3b2",
+  "createdAt": "2025-03-31T12:00:00Z",
+  "email": "joao@email.com",
+  "name": "João Silva",
+  "password": "hash_senha"
+}
+```
