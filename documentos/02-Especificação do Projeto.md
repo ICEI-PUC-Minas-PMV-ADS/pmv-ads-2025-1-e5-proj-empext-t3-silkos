@@ -125,7 +125,7 @@ Armazena os serviços prestados a clientes.
 }
 ```
 
-### 2.2. Coleção `User`
+### 1.2. Coleção `User`
 Armazena os usuários do sistema.
 
 #### Campos:
