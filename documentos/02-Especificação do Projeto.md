@@ -91,7 +91,8 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Diagrama de Caso de Uso
 
-![image](https://github.com/user-attachments/assets/9ba6f75d-1886-45ae-8217-d66ceb6ff34f)
+![DCU](https://github.com/user-attachments/assets/41389381-0a2d-4eb6-9d15-0254a403f34d)
+
 
 Diagrama criado via [draw.io](http://draw.io/)
 
