@@ -98,7 +98,8 @@ Diagrama criado via [draw.io](http://draw.io/)
 
 ## Projeto da Base de Dados - SilkOS
 
-![image](https://github.com/user-attachments/assets/114f5276-27af-41d9-a25f-01a153c16203)
+![image](https://github.com/user-attachments/assets/76f66bae-f308-47a3-96d3-a92db523c41c)
+
 
 
 ## 1. Estrutura do Banco de Dados
