@@ -153,14 +153,12 @@ Contém os valores de serviços com base na complexidade e características do t
 ```
 
 ## 2. Relacionamentos
-- `Servico` pode estar vinculado a um `Cliente` caso os serviços sejam personalizados para clientes específicos.
 - `User` gerencia os `Servicos` cadastrados no sistema.
 - `Valores` são utilizados para precificar os serviços cadastrados em `Servico`.
 
 ## 3. Índices e Otimização
 Para melhorar a eficiência do banco de dados, os seguintes índices serão criados:
 - `User.email` (único) para garantir autenticação rápida.
-- `Cliente.email` para facilitar buscas.
 - `Servico.nome` para consultas eficientes de serviços disponíveis.
 
 ## 4. Regras de Validação
