@@ -93,14 +93,14 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Diagrama de Caso de Uso
 
-![DCU](https://github.com/user-attachments/assets/41389381-0a2d-4eb6-9d15-0254a403f34d)
+![image](https://github.com/user-attachments/assets/bb3bad67-bb23-4e79-975f-0f6a251df51b)
 
 
 Diagrama criado via [draw.io](http://draw.io/)
 
 ## Projeto da Base de Dados - SilkOS
 
-![image](https://github.com/user-attachments/assets/76f66bae-f308-47a3-96d3-a92db523c41c)
+![image](https://github.com/user-attachments/assets/5c3ecb0c-3125-406a-a8b3-d67c690814f1)
 
 
 
@@ -128,9 +128,6 @@ Armazena os serviços prestados aos clientes.
 ```json
 {
   "_id": ObjectId("..."),
-  "nome": "Maria Souza",
-  "email": "maria@email.com",
-  "celular": "(11) 99999-9999"
   "servico1": "Sublimação",
   "servico2": "Transfer Laser",
   "qtdCor": 4,
@@ -155,9 +152,21 @@ Contém os valores de serviços com base na complexidade e características do t
 }
 ```
 
-## 2. Relacionamentos
-- `User` gerencia os `Servicos` cadastrados no sistema.
-- `Valores` são utilizados para precificar os serviços cadastrados em `Servico`.
+### 1.5. Coleção `Cliente`
+Armazena os serviços prestados aos clientes.
+
+#### Exemplo de Documento:
+```json
+{
+  "_id": ObjectId("..."),
+  "nome": "Maria Souza",
+  "email": "maria@email.com",
+  "celular": "(11) 99999-9999"
+  "endereco1": "Bairro",
+  "endereco2": "Rua",
+  "numero": 123
+}
+```
 
 ## 3. Índices e Otimização
 Para melhorar a eficiência do banco de dados, os seguintes índices serão criados:
