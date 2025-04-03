@@ -1,19 +1,28 @@
 import { useState } from "react";
+import api from "../../../Backend/api";
 import StyleEsqueceuSenhaPage from "./EsqueceuSenhaPage.module.css";
 
 export default function EsqueceuSenhaPage() {
-
     const [email, setEmail] = useState("");
+    const [text, setText] = useState("");
+
+    async function SendEmailToken() {
+        const response = await api.post("/Users/recuperarSenhaEmail", {
+            email: email,
+        });
+
+        return response;
+    }
 
     async function SendRecPassword() {
-        await fetch("http://localhost:300/Users/sendEmail", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                to: `${email}`,
-            })
-        });
-    };
+        const res = await SendEmailToken();
+
+        if (res.status == 200) {
+            setText("Email enviado!");
+        } else {
+            setText("Erro no servidor, por favor tente novamente mais tarde!");
+        }
+    }
 
     return (
         <div className={StyleEsqueceuSenhaPage.body}>
@@ -27,9 +36,11 @@ export default function EsqueceuSenhaPage() {
                         id="email"
                         type="email"
                         placeholder="Email"
-                        onChange={(e) => setEmail(e.target.value )}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                     />
                     <button onClick={() => SendRecPassword()}>Enviar</button>
+                    {text}
                 </div>
             </div>
         </div>

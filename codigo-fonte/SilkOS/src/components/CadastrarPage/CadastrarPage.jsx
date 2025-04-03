@@ -4,10 +4,10 @@ import api from "../../../Backend/api";
 import StyleCadastrarPage from "./CadastrarPage.module.css";
 
 export default function CadastrarPage() {
-
     const navigate = useNavigate();
 
     const initialState = {
+        nome: "",
         email: "",
         email2: "",
         password: "",
@@ -24,7 +24,7 @@ export default function CadastrarPage() {
             default:
                 return state;
         }
-    };
+    }
 
     const [state, dispatch] = useReducer(Reducer, initialState);
 
@@ -34,7 +34,7 @@ export default function CadastrarPage() {
             field,
             value,
         });
-    };
+    }
 
     async function getUsers() {
         try {
@@ -45,23 +45,21 @@ export default function CadastrarPage() {
             });
 
             return response;
-
         } catch (error) {
             if (error.response && error.response.status === 404) {
                 return error.response;
             }
-        };
-    };
+        }
+    }
 
     async function postUsers() {
-        await api.post("/Users/", {
+        await api.post("/Users/cadastrar", {
             email: state.email,
             password: state.password,
         });
-    };
+    }
 
     async function HandleCadastro() {
-
         if (state.email !== state.email2) {
             dispatch("text", "O campo email devem ser igual ");
         } else if (state.password !== state.passwor2) {
@@ -71,12 +69,11 @@ export default function CadastrarPage() {
         const response = getUsers();
 
         if (response.status !== 200) {
-            postUsers();
+            await postUsers();
             navigate("/Login");
         } else {
             dispatch("text", "Erro no servidor, por favor tente mais tarde!");
         }
-        
     }
 
     return (
@@ -88,37 +85,31 @@ export default function CadastrarPage() {
                 <div className={StyleCadastrarPage.container}>
                     <div className={StyleCadastrarPage.formCadastrar}>
                         <input
+                            type="text"
+                            placeholder="Nome"
+                            value={state.value}
+                            onChange={(e) => HandleChangeState("nome", e.target.value)}
+                        />
+                        <input
                             type="email"
                             placeholder="Email"
                             value={state.value}
-                            onChange={(e) =>
-                                HandleChangeState("email", e.target.value)
-                            }
+                            onChange={(e) => HandleChangeState("email", e.target.value)}
                         />
                         <input
                             type="email"
                             placeholder="Email novamente"
                             value={state.value}
-                            onChange={(e) =>
-                                HandleChangeState("email2", e.target.value)
-                            }
+                            onChange={(e) => HandleChangeState("email2", e.target.value)}
                         />
-                        <input
-                            type="password"
-                            placeholder="Senha"
-                            onChange={(e) =>
-                                HandleChangeState("password", e.target.value)
-                            }
-                        />
+                        <input type="password" placeholder="Senha" onChange={(e) => HandleChangeState("password", e.target.value)} />
                         <input
                             type="password"
                             placeholder="Senha Novamente"
-                            onChange={(e) =>
-                                HandleChangeState("password2", e.target.value)
-                            }
+                            onChange={(e) => HandleChangeState("password2", e.target.value)}
                         />
                         <p>{state.text}</p>
-                        <button onClick={HandleCadastro}>SALVAR</button>
+                        <button onClick={HandleCadastro}>CADASTRAR</button>
                     </div>
                 </div>
             </div>

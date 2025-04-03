@@ -84,8 +84,11 @@ Prisma.NullTypes = {
  */
 exports.Prisma.UserScalarFieldEnum = {
   id: 'id',
+  nome: 'nome',
   email: 'email',
-  password: 'password'
+  password: 'password',
+  verificado: 'verificado',
+  token: 'token'
 };
 
 exports.Prisma.SortOrder = {
@@ -113,7 +116,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\César\\Desktop\\pmv-ads-2025-1-e5-proj-empext-t3-silkos\\codigo-fonte\\SilkOS\\Backend\\prisma\\generated\\client1",
+      "value": "C:\\Users\\César\\Desktop\\Projetos\\pmv-ads-2025-1-e5-proj-empext-t3-silkos\\codigo-fonte\\SilkOS\\Backend\\prisma\\generated\\client1",
       "fromEnvVar": null
     },
     "config": {
@@ -127,12 +130,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\César\\Desktop\\pmv-ads-2025-1-e5-proj-empext-t3-silkos\\codigo-fonte\\SilkOS\\Backend\\prisma\\schemaUsers.prisma",
+    "sourceFilePath": "C:\\Users\\César\\Desktop\\Projetos\\pmv-ads-2025-1-e5-proj-empext-t3-silkos\\codigo-fonte\\SilkOS\\Backend\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../../.env",
-    "schemaEnvPath": "../../../../.env"
+    "rootEnvPath": "../../../../.env"
   },
   "relativePath": "../..",
   "clientVersion": "6.5.0",
@@ -141,6 +143,7 @@ const config = {
     "db1"
   ],
   "activeProvider": "mongodb",
+  "postinstall": false,
   "inlineDatasources": {
     "db1": {
       "url": {
@@ -149,13 +152,13 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/client1\"\n}\n\ndatasource db1 {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL_USERS\")\n}\n\nmodel User {\n  id       String @id @default(auto()) @map(\"_id\") @db1.ObjectId\n  email    String @unique\n  password String\n}\n",
-  "inlineSchemaHash": "a42066f5044eb1cf07021592911ad29cd4397c20d055dd05b29bef1a4cede0ce",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"./generated/client1\" //escolherSaida\n}\n\ndatasource db1 {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL_USERS\")\n}\n\nmodel User {\n  id         String  @id @default(auto()) @map(\"_id\") @db1.ObjectId\n  nome       String\n  email      String  @unique\n  password   String\n  verificado Boolean @default(false)\n  token      String?\n}\n",
+  "inlineSchemaHash": "26ed275508fa4f098bc02fb32f82da1dfeab1b0a692c9fae4053ea609d9d38f4",
   "copyEngine": true
 }
 config.dirname = '/'
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"dbName\":null,\"schema\":null,\"fields\":[{\"name\":\"id\",\"dbName\":\"_id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":true,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"String\",\"nativeType\":[\"ObjectId\",[]],\"default\":{\"name\":\"auto\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"email\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":true,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"password\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false}],\"primaryKey\":null,\"uniqueFields\":[],\"uniqueIndexes\":[],\"isGenerated\":false}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"dbName\":null,\"schema\":null,\"fields\":[{\"name\":\"id\",\"dbName\":\"_id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":true,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"String\",\"nativeType\":[\"ObjectId\",[]],\"default\":{\"name\":\"auto\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"nome\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"email\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":true,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"password\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"verificado\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"Boolean\",\"nativeType\":null,\"default\":false,\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"token\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false}],\"primaryKey\":null,\"uniqueFields\":[],\"uniqueIndexes\":[],\"isGenerated\":false}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.engineWasm = undefined
 config.compilerWasm = undefined
