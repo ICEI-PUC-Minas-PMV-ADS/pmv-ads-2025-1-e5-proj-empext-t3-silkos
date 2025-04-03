@@ -15,7 +15,9 @@ A arquitetura do projeto SilkOS foi concebida para ser modular, escalável e de 
 
 ## Project Model Canvas
 
-![image](https://github.com/user-attachments/assets/c28a30db-7f30-4133-af6a-166c49067c70)
+![Project-Model-canvas Silkos](https://github.com/user-attachments/assets/4e06d8cc-0ccb-45f4-92a3-695c6591b59d)
+
+
 
 ## Requisitos
 
@@ -91,12 +93,111 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 ## Diagrama de Caso de Uso
 
-![image](https://github.com/user-attachments/assets/9ba6f75d-1886-45ae-8217-d66ceb6ff34f)
+![image](https://github.com/user-attachments/assets/bb3bad67-bb23-4e79-975f-0f6a251df51b)
+
 
 Diagrama criado via [draw.io](http://draw.io/)
 
-## Projeto da Base de Dados
+## Projeto da Base de Dados - SilkOS
 
-![projeto da base de dados](https://github.com/user-attachments/assets/ec595fc8-b013-48c8-b689-12c49ea79c51)
+![image](https://github.com/user-attachments/assets/5c3ecb0c-3125-406a-a8b3-d67c690814f1)
 
+
+
+## 1. Estrutura do Banco de Dados
+A base de dados do **SilkOS** é composta pelas seguintes coleções:
+
+### 1.1. Coleção `User`
+Armazena os dados dos usuários do sistema.
+
+#### Exemplo de Documento:
+```json
+{
+  "_id": ObjectId("..."),
+  "createdAt": ISODate("2025-03-31T12:00:00Z"),
+  "email": "usuario@email.com",
+  "name": "João Silva",
+  "password": "hash_senha"
+}
+```
+
+### 1.3. Coleção `Servico`
+Armazena os serviços prestados aos clientes.
+
+#### Exemplo de Documento:
+```json
+{
+  "_id": ObjectId("..."),
+  "servico1": "Sublimação",
+  "servico2": "Transfer Laser",
+  "qtdCor": 4,
+  "qtdPeças": 10,
+  "data": ISODate("2025-03-31T12:00:00Z")
+}
+```
+
+### 1.4. Coleção `Valores`
+Contém os valores de serviços com base na complexidade e características do trabalho.
+
+#### Exemplo de Documento:
+```json
+{
+  "_id": ObjectId("..."),
+  "vSimples": 50.00,
+  "vMediana": 75.00,
+  "vComplexo": 120.00,
+  "layout": 30.00,
+  "sepCor": 15.00,
+  "vlrQtdCor": 10.00
+}
+```
+
+### 1.5. Coleção `Cliente`
+Armazena os serviços prestados aos clientes.
+
+#### Exemplo de Documento:
+```json
+{
+  "_id": ObjectId("..."),
+  "nome": "Maria Souza",
+  "email": "maria@email.com",
+  "celular": "(11) 99999-9999"
+  "endereco1": "Bairro",
+  "endereco2": "Rua",
+  "numero": 123
+}
+```
+
+## 3. Índices e Otimização
+Para melhorar a eficiência do banco de dados, os seguintes índices serão criados:
+- `User.email` (único) para garantir autenticação rápida.
+- `Servico.nome` para consultas eficientes de serviços disponíveis.
+
+## 4. Regras de Validação
+Utilizando **JSON Schema Validation**, podemos garantir a integridade dos dados. Exemplo para `User`:
+```json
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["email", "name", "password"],
+    "properties": {
+      "email": { "bsonType": "string", "pattern": "^.+@.+$", "description": "Email válido" },
+      "name": { "bsonType": "string", "description": "Nome do usuário" },
+      "password": { "bsonType": "string", "description": "Hash da senha" }
+    }
+  }
+}
+```
+
+## 5. Exemplos de Consultas
+
+### Buscar serviços cadastrados:
+```javascript
+db.servico.find({})
+```
+
+### Listar clientes pelo email:
+```javascript
+db.cliente.find({ email: "maria@email.com" })
+```
 
