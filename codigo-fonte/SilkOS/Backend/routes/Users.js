@@ -23,8 +23,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "cesartakahashi24@gmail.com",
-        pass: "noin idwp ipfx dgbv ",
+        user: "",
+        pass: "",
     },
 });
 
