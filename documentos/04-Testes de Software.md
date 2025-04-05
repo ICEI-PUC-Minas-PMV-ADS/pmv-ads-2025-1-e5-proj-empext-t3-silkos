@@ -13,7 +13,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-001<br>Realizar registro</th>
+    <th colspan="6" width="1000">CT-001<br>Realizar registro e login com sucesso</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
@@ -33,13 +33,13 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/2e3c1722-7adc-4bd4-8b4c-3abe9ddc1b48"/></td>
+    <td colspan="6" align="center"><video src="./videos/sucesso.mp4"/></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-001<br>Login com credenciais válidas</th>
+    <th colspan="6" width="1000">CT-001<br>Erros no login e registro</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
@@ -59,7 +59,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/2e3c1722-7adc-4bd4-8b4c-3abe9ddc1b48"/></td>
+    <td colspan="6" align="center"><video src="./videos/insucesso.mp4"/></td>
   </tr>
 </table>
 
