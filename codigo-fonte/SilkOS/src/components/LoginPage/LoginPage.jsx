@@ -4,42 +4,44 @@ import api from "../../../Backend/api";
 import StyleLoginPage from "./LoginPage.module.css";
 
 export default function LoginPage() {
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [text, setText] = useState("");
 
     async function getUsers() {
         try {
-            const response = await api.get(`/Users`, {
-                params: {
-                    email: email,
-                },
+            const response = await api.post(`/Users/autenticar`, {
+                email: email,
+                password: password,
             });
 
             return response;
         } catch (error) {
-            if (error.response && error.response.status === 404) {
+            if (error.response) {
                 return error.response;
             }
         }
     }
 
     async function HandleLogin() {
+        setText("");
+
         if (email == "") {
             setText("Preencha o campo EMAIL!");
+            return;
         } else if (password == "") {
             setText("Preencha o campo SENHA!");
+            return;
         }
 
         const response = await getUsers();
 
         if (response && response.status === 200) {
-            console.log("Usuario autenticado!")
-        } else if (response && response.status === 404) {
-            setText("Usuário não encontrado!");
+            console.log("Usuario autenticado!");
+        } else if (response && response.status === 403) {
+            setText(response.data.message);
         } else {
-            setText("Erro no servidor, por favor tente mais tarde!");
+            setText("Erro no servidor! Por favor tente mais tarde!");
         }
     }
 
@@ -50,16 +52,8 @@ export default function LoginPage() {
             </div>
             <div className={StyleLoginPage.container}>
                 <div className={StyleLoginPage.formLogin}>
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input
-                        type="password"
-                        placeholder="Senha"
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
+                    <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                    <input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <div className={StyleLoginPage.options}>
                     <Link to="/Cadastro">Cadastrar</Link>

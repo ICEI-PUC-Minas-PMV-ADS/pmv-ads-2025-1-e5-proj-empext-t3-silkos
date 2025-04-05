@@ -54,21 +54,32 @@ export default function CadastrarPage() {
 
     async function postUsers() {
         await api.post("/Users/cadastrar", {
+            nome: state.nome,
             email: state.email,
             password: state.password,
         });
     }
 
     async function HandleCadastro() {
-        if (state.email !== state.email2) {
-            dispatch("text", "O campo email devem ser igual ");
+        HandleChangeState("text", "");
+
+        if (state.email != state.email2) {
+            HandleChangeState("text", "O campo email deve ser igual ");
+            return;
         } else if (state.password !== state.passwor2) {
-            dispatch("text", "O campo senha deve ser igual");
+            HandleChangeState("text", "O campo senha deve ser igual");
+            return;
         }
 
-        const response = getUsers();
+        if (!state.email || !state.email2 || !state.password || !state.passwor2 || !state.nome) {
+            HandleChangeState("text", "preencha todos os campos corretamente.");
+        }
 
-        if (response.status !== 200) {
+        console.log("rodou");
+
+        const response = await getUsers();
+
+        if (!response.status.ok) {
             await postUsers();
             navigate("/Login");
         } else {
@@ -106,10 +117,17 @@ export default function CadastrarPage() {
                         <input
                             type="password"
                             placeholder="Senha Novamente"
-                            onChange={(e) => HandleChangeState("password2", e.target.value)}
+                            onChange={(e) => HandleChangeState("passwor2", e.target.value)}
                         />
                         <p>{state.text}</p>
-                        <button onClick={HandleCadastro}>CADASTRAR</button>
+                        <button onClick={() => HandleCadastro()}>CADASTRAR</button>
+                        <button
+                            onClick={() => {
+                                navigate("/Login");
+                            }}
+                        >
+                            Voltar para login
+                        </button>
                     </div>
                 </div>
             </div>

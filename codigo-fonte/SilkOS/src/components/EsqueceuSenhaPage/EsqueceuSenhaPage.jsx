@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import api from "../../../Backend/api";
 import StyleEsqueceuSenhaPage from "./EsqueceuSenhaPage.module.css";
 
 export default function EsqueceuSenhaPage() {
+    const navigate = useNavigate();
+
     const [email, setEmail] = useState("");
     const [text, setText] = useState("");
 
@@ -41,6 +44,13 @@ export default function EsqueceuSenhaPage() {
                     />
                     <button onClick={() => SendRecPassword()}>Enviar</button>
                     {text}
+                    <button
+                        onClick={() => {
+                            navigate("/Login");
+                        }}
+                    >
+                        Voltar para login
+                    </button>
                 </div>
             </div>
         </div>

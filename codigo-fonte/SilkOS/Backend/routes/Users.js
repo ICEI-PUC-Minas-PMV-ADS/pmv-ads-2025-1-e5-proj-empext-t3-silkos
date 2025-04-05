@@ -23,8 +23,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "",
-        pass: "",
+        user: "cesartakahashi24@gmail.com",
+        pass: "noin idwp ipfx dgbv",
     },
 });
 
@@ -59,7 +59,7 @@ routerUsersAPI.post("/cadastrar", async (req, res) => {
     }
 });
 
-routerUsersAPI.put("/validarEmail", async (req, res) => {
+routerUsersAPI.get("/validarEmail", async (req, res) => {
     const { email, token } = req.query;
 
     try {
@@ -148,4 +148,34 @@ routerUsersAPI.put("/redefinirSenha", async (req, res) => {
         res.status(500).json({ error: "Erro ao redefinir senha: " + e.message });
     }
 });
+
+routerUsersAPI.post("/autenticar", async (req, res) => {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        return res.status(400).json({ message: "Email e senha são obrigatórios!" });
+    }
+
+    try {
+        const user = await prisma.user.findUnique({
+            where: {
+                email: email,
+            },
+        });
+
+        if (!user || user.password !== password) {
+            return res.status(401).json({ message: "Usuaário não encontrado!" });
+        }
+
+        if (!user.verificado) {
+            return res.status(403).json({ message: "Usuário não verificado!" });
+        }
+
+        return res.status(200).json({ message: "Usuário autenticado!" });
+    } catch (error) {
+        console.error("Erro ao fazer login:", error);
+        return res.status(500).json({ error: error.message });
+    }
+});
+
 export default routerUsersAPI;
