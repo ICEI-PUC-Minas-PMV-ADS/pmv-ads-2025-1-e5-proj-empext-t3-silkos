@@ -4,8 +4,8 @@ Este documento apresenta os testes de software realizados em nossa aplicação. 
 
 ## Tipo de Teste
 
-- **Sucesso**: Tem o objetivo de verificar se as funcionalidades funcionam corretamente.
-- **Insucesso**: Tem o objetivo de verificar se o sistema trata erros de maneira correta.
+-   **Sucesso**: Tem o objetivo de verificar se as funcionalidades funcionam corretamente.
+-   **Insucesso**: Tem o objetivo de verificar se o sistema trata erros de maneira correta.
 
 ### Parte 1 - Testes Unitários
 
@@ -33,7 +33,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="./videos/sucesso.mp4"/></td>
+    <td colspan="6" align="center"><video src="./videos/sucesso.mp4" type="video/mp4"/></td>
   </tr>
 </table>
 
@@ -53,13 +53,13 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">O sistema está permitindo o login corretamente. Redirecionando o usuário a tela principal da aplicação.</td>
+    <td colspan="5">O sistema deve informar o usuário em caso de erros no internos ou falta de informações.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="./videos/insucesso.mp4"/></td>
+    <td colspan="6" align="center"><video src="./videos/insucesso.mp4" type="video/mp4"/></td>
   </tr>
 </table>
 
