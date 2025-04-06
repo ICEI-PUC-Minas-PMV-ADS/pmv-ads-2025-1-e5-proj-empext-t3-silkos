@@ -15,7 +15,8 @@ A arquitetura do projeto SilkOS foi concebida para ser modular, escalável e de 
 
 ## Project Model Canvas
 
-![ProjectModelCanvasA1](https://github.com/user-attachments/assets/f51cb3bf-5281-4b91-9401-1708824781d6)
+![Project model canvas](https://github.com/user-attachments/assets/f5f299d1-e7b7-4358-b4cf-82011177c4f1)
+
 
 
 
