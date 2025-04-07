@@ -35,7 +35,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="./videos/sucesso.mp4" type="video/mp4"/></td>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
   </tr>
 </table>
 
@@ -61,7 +61,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="./videos/insucesso.mp4" /></td>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
   </tr>
 </table>
 
