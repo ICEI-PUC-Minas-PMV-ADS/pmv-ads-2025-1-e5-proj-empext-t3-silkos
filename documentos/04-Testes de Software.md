@@ -1,6 +1,8 @@
 # Planos de Testes de Software
 
-Este documento apresenta os testes de software realizados em nossa aplicação. A seguir, é possível visualizar de forma clara como o sistema trata erros e orienta o usuário sobre como proceder em cada situação. O objetivo deste material é demonstrar que a aplicação lida com falhas de forma objetiva e transparente, proporcionando uma experiência confiável ao usuário.
+Este documento apresenta os testes realizados na aplicação com o objetivo de validar suas funcionalidades e garantir uma experiência confiável ao usuário. A seguir, são detalhados os testes que comprovam como o sistema lida tanto com cenários de sucesso quanto com falhas, fornecendo feedback adequado e orientações claras ao usuário.
+
+
 
 ## Tipo de Teste
 
@@ -71,7 +73,7 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-001<br>Login com credenciais válidas</th>
+    <th colspan="6" width="1000">CT-002<br>Login com credenciais válidas</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
