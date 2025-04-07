@@ -41,7 +41,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-001<br>Erros no login e registro</th>
+    <th colspan="6" width="1000">CT-002<br>Erros no login e registro</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
@@ -73,7 +73,7 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-002<br>Login com credenciais válidas</th>
+    <th colspan="6" width="1000">CT-001<br>Login com credenciais válidas</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
