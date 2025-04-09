@@ -39,6 +39,10 @@ Você pode acessar diretamente o protótipo pelo link abaixo ou visualizar via i
 ![Orçamento(Cliente)](https://github.com/user-attachments/assets/1ee97d04-6f12-49a2-842d-6bd83fbf7ef8)
 
 
+## Clientes
+![Clientes](https://github.com/user-attachments/assets/2f4fce37-7bf0-4482-b3f6-486f3da8d2d2)
+
+
 ## Login
 ![Login](https://github.com/user-attachments/assets/92e965fb-958d-4c60-9b79-fabbde102d17)
 
@@ -53,3 +57,4 @@ Você pode acessar diretamente o protótipo pelo link abaixo ou visualizar via i
 
 ## Nova senha
 ![Nova senha](https://github.com/user-attachments/assets/3a04b42f-1ef4-4523-b6ef-80fd0cded313)
+
