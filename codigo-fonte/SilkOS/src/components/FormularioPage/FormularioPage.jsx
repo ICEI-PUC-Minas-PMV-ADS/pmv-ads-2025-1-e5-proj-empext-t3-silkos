@@ -45,15 +45,18 @@ export default function FormularioPage() {
       <input type="text" placeholder="Nome Cliente" value={nomeCliente} onChange={(e) => setNomeCliente(e.target.value)} />
 
       <h3>Artes</h3>
-      <select value={servico1} onChange={(e) => setServico1(e.target.value)}>
-        <option value="">Selecionar Serviço 1</option>
-        {servico1Options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
-      </select>
+        <div className={styles.artesContainer}>
+        <select value={servico1} onChange={(e) => setServico1(e.target.value)} className={styles.selectMetade}>
+          <option value="">Selecionar Serviço 1</option>
+          {servico1Options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+        </select>
 
-      <select value={servico2} onChange={(e) => setServico2(e.target.value)}>
-        <option value="">Selecionar Serviço 2</option>
-        {servico2Options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
-      </select>
+        <select value={servico2} onChange={(e) => setServico2(e.target.value)} className={styles.selectMetade}>
+         <option value="">Selecionar Serviço 2</option>
+          {servico2Options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+        </select>
+    </div>
+
 
       <h3>Serviços de Silk</h3>
       <input type="number" placeholder="Quantidade de cor" value={quantidadeCor} onChange={(e) => setQuantidadeCor(Number(e.target.value))} />
