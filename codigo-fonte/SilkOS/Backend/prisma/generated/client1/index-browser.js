@@ -17,12 +17,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.5.0
- * Query Engine version: 173f8d54f8d52e692c7e27e72a88314ec7aeff60
+ * Prisma Client JS version: 6.6.0
+ * Query Engine version: f676762280b54cd07c770017ed3711ddde35f37a
  */
 Prisma.prismaVersion = {
-  client: "6.5.0",
-  engine: "173f8d54f8d52e692c7e27e72a88314ec7aeff60"
+  client: "6.6.0",
+  engine: "f676762280b54cd07c770017ed3711ddde35f37a"
 }
 
 Prisma.PrismaClientKnownRequestError = () => {
@@ -119,6 +119,38 @@ exports.Prisma.UserScalarFieldEnum = {
   token: 'token'
 };
 
+exports.Prisma.ServicoScalarFieldEnum = {
+  id: 'id',
+  cliente: 'cliente',
+  servico1: 'servico1',
+  servico2: 'servico2',
+  quantidadeCor: 'quantidadeCor',
+  quantidadePeca: 'quantidadePeca',
+  valor: 'valor',
+  data: 'data'
+};
+
+exports.Prisma.ValoresConfigScalarFieldEnum = {
+  id: 'id',
+  vetorSimples: 'vetorSimples',
+  vetorMediano: 'vetorMediano',
+  vetorComplexo: 'vetorComplexo',
+  layout: 'layout',
+  separacaoCor: 'separacaoCor',
+  valorCor: 'valorCor'
+};
+
+exports.Prisma.ClienteScalarFieldEnum = {
+  id: 'id',
+  nome: 'nome',
+  email: 'email',
+  celular: 'celular',
+  endereco1: 'endereco1',
+  numero1: 'numero1',
+  endereco2: 'endereco2',
+  numero2: 'numero2'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -131,7 +163,10 @@ exports.Prisma.QueryMode = {
 
 
 exports.Prisma.ModelName = {
-  User: 'User'
+  User: 'User',
+  Servico: 'Servico',
+  ValoresConfig: 'ValoresConfig',
+  Cliente: 'Cliente'
 };
 
 /**
@@ -151,7 +186,7 @@ class PrismaClient {
         } else {
           message = 'PrismaClient is unable to run in this browser environment, or has been bundled for the browser (running in `' + runtime.prettyName + '`).'
         }
-        
+
         message += `
 If this is unexpected, please open an issue: https://pris.ly/prisma-prisma-bug-report`
 
