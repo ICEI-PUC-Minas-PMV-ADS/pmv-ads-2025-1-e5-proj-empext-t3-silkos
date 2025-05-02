@@ -1,8 +1,27 @@
 import { useEffect, useState } from "react";
 import api from "../api";
 import "./servicelist.css"; // Importe o CSS aqui
+import { useNavigate } from "react-router-dom";
 
 const ServiceList = ({ services, setServices }) => {
+
+  const navigate = useNavigate();
+
+  const name = sessionStorage.getItem("name");
+
+  useEffect(() => {
+      const timer = setTimeout(() => {
+          if (name == null || name == undefined || name == "") {
+              alert("Você precisa estar autenticado para acessar essa página!");
+              navigate("/Login");
+          }
+      }, 1);
+
+      return () => {
+          clearTimeout(timer);
+      };
+  }, [name, navigate]);
+
   const [editingId, setEditingId] = useState(null); // ID do item em edição
   const [editData, setEditData] = useState({
     cliente: "",
