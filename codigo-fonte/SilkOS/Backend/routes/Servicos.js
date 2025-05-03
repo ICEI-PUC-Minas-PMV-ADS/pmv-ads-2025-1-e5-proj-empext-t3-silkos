@@ -105,7 +105,27 @@ routerServicos.put("/:id", async (req, res) => {
     data
   } = req.body;
 
- 
+  try {
+    const valor = quantidadeCor * 2 * quantidadePeca;
+
+    const servicoAtualizado = await prisma.servico.update({
+      where: { id },
+      data: {
+        cliente,
+        servico1,
+        servico2: servico2 || null,
+        quantidadeCor,
+        quantidadePeca,
+        valor,
+        data: new Date(data)
+      }
+    });
+
+    res.json(servicoAtualizado);
+  } catch (error) {
+    console.error("Erro ao atualizar o serviço:", error);
+    res.status(500).json({ error: "Erro ao atualizar o serviço" });
+  }
 });
 
 // Deletar um serviço
