@@ -211,7 +211,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">O sistema alerta com uma menssagem de erro, pedindo para verificar se os campos estão preenchidos corretamente.</td>
+    <td colspan="5">O sistema alerta com uma menssagem de erro, pedindo para verificar se os campos estão preenchidos corretamente respeitando os Datatypes corretos.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
@@ -237,7 +237,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">O sistema alerta com uma menssagem de erro, pedindo para verificar se os campos estão preenchidos corretamente.</td>
+    <td colspan="5">O sistema está salvando corretamente o valor editado.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
