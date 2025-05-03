@@ -149,7 +149,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
   </tr>
   <tr>
     <td width="170"><strong>Critérios de falha</strong></td>
-    <td colspan="5">Erro ao salvar o cliente!, verifique se a campos em brancos antes de salvar.</td>
+    <td colspan="5">Erro ao salvar o cliente, verifique se a campos em brancos antes de salvar.</td>
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
@@ -195,7 +195,57 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-008<br>Erros ao Editar Valores</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de falha</strong></td>
+    <td colspan="5">Erro ao salvar o Valor!</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Márcio Emanuel Batista de Pádua</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema alerta com uma menssagem de erro, pedindo para verificar se os campos estão preenchidos corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
 
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-009<br>Edição de Valores</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios do êxito</strong></td>
+    <td colspan="5">Edição de valores realizada, com o preenchimento de todos os campos corretamente.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Márcio Emanuel Batista de Pádua</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema alerta com uma menssagem de erro, pedindo para verificar se os campos estão preenchidos corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
 
 ## Parte 2 - Testes por pares
 
