@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // ⬅️ importar useNavigate
 import api from "../../../Backend/api";
 import StyleLoginPage from "./LoginPage.module.css";
 
@@ -7,6 +7,8 @@ export default function LoginPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [text, setText] = useState("");
+
+    const navigate = useNavigate(); // ⬅️ inicializa o hook de navegação
 
     async function getUsers() {
         try {
@@ -26,10 +28,10 @@ export default function LoginPage() {
     async function HandleLogin() {
         setText("");
 
-        if (email == "") {
+        if (email === "") {
             setText("Preencha o campo EMAIL!");
             return;
-        } else if (password == "") {
+        } else if (password === "") {
             setText("Preencha o campo SENHA!");
             return;
         }
@@ -37,7 +39,8 @@ export default function LoginPage() {
         const response = await getUsers();
 
         if (response && response.status === 200) {
-            console.log("Usuario autenticado!");
+            console.log("Usuário autenticado!");
+            navigate("/FormularioPage"); // ⬅️ redireciona para FormularioPage
         } else if (response && response.status === 403) {
             setText(response.data.message);
         } else {

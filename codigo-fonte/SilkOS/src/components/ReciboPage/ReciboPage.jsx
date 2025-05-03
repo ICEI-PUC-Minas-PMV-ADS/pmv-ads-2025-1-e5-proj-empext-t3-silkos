@@ -4,26 +4,8 @@ import "jspdf-autotable";
 import styles from './ReciboPage.module.css';
 import Navbar from '../Navbar/Navbar';
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 const ReciboPage = () => {
-  const navigate = useNavigate();
-
-  const name = sessionStorage.getItem("name");
-
-  useEffect(() => {
-      const timer = setTimeout(() => {
-          if (name == null || name == undefined || name == "") {
-              alert("Você precisa estar autenticado para acessar essa página!");
-              navigate("/Login");
-          }
-      }, 1);
-
-      return () => {
-          clearTimeout(timer);
-      };
-  }, [name, navigate]);
-
   const [services, setServices] = useState([]);
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");

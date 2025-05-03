@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
 import styles from './FormularioPage.module.css';
 import axios from 'axios';
 import Navbar from '../Navbar/Navbar';
@@ -8,23 +7,6 @@ const servico1Options = ['Vetor Simples', 'Vetor Mediano', 'Vetor Complexo', 'La
 const servico2Options = ['Layout', 'Separação de cor'];
 
 export default function FormularioPage() {
-  const navigate = useNavigate();
-
-  const name = sessionStorage.getItem("name");
-
-  useEffect(() => {
-      const timer = setTimeout(() => {
-          if (name == null || name == undefined || name == "") {
-              alert("Você precisa estar autenticado para acessar essa página!");
-              navigate("/Login");
-          }
-      }, 1);
-
-      return () => {
-          clearTimeout(timer);
-      };
-  }, [name, navigate]);
-
   const [clientes, setClientes] = useState([]);
   const [cliente, setCliente] = useState('');
   const [servico1, setServico1] = useState('');
@@ -98,7 +80,7 @@ export default function FormularioPage() {
       console.log(response.data);
     } catch (err) {
       console.error('Erro ao salvar serviço:', err);
-      alert('Erro ao salvar o serviço!');
+      alert('Erro ao salvar o serviço!,\nVerifique se o cliente já existe ou se os campos estão preenchidos corretamente!');
     }
   };
 

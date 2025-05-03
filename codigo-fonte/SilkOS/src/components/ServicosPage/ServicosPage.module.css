@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.container {
+  background-color: #1e1e1e;
+  min-height: 100vh;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.formContainer {
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+select {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+  border-radius: 6px;
+  overflow-y: auto;
+  max-height: 300px;
+  background-color: #1c1c1c;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1c1c1c;
+}
+
+.lista::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lista::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 3px;
+}
+
+.lista::-webkit-scrollbar-track {
+  background-color: #1c1c1c;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #333;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.item span {
+  color: #ddd;
+}
+
+.edit,
+.delete,
+.save,
+.cancel {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit {
+  background-color: #28a745;
+  color: white;
+}
+
+.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.save {
+  background-color: #007bff;
+  color: white;
+}
+
+.cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.button {
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
