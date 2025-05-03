@@ -28,6 +28,13 @@ export default function ClientePage() {
   };
 
   const handleSalvar = async () => {
+    const { nome, email, celular } = formData;
+
+    if (!nome.trim() || !email.trim() || !celular.trim()) {
+      alert("Por favor, preencha os campos obrigatórios: Nome, Email e Celular.");
+      return;
+    }
+
     try {
       if (editandoId) {
         const res = await axios.put(`http://localhost:3000/clientes/${editandoId}`, formData);
@@ -44,6 +51,7 @@ export default function ClientePage() {
       });
     } catch (err) {
       console.error('Erro ao salvar cliente:', err);
+      alert("Erro ao salvar o cliente.");
     }
   };
 
