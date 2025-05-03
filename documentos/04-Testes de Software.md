@@ -145,7 +145,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-006<br>Erros ao Salvar Serviços</th>
+    <th colspan="6" width="1000">CT-006<br>Erros ao Cadastrar Cliente</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de falha</strong></td>
