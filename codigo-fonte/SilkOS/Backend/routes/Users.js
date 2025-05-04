@@ -23,9 +23,9 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "cesartakahashi24@gmail.com",
-        pass: "noin idwp ipfx dgbv",
-    },
+        user: "",
+        pass: ""
+    }
 });
 
 routerUsersAPI.post("/cadastrar", async (req, res) => {
@@ -38,8 +38,8 @@ routerUsersAPI.post("/cadastrar", async (req, res) => {
                 email: req.body.email,
                 password: req.body.password,
                 token: tokenUser,
-                verificado: false,
-            },
+                verificado: false
+            }
         });
 
         if (novoUsuario) {
@@ -48,7 +48,7 @@ routerUsersAPI.post("/cadastrar", async (req, res) => {
                 to: req.body.email,
                 subject: "Confirmação de email",
                 html: `Clique nesse link para validar sua conta: 
-                <a href="http://localhost:3000/Users/validarEmail?token=${tokenUser}&email=${req.body.email}">Validar Conta</a>`,
+                <a href="http://localhost:3000/Users/validarEmail?token=${tokenUser}&email=${req.body.email}">Validar Conta</a>`
             });
         }
 
@@ -65,8 +65,8 @@ routerUsersAPI.get("/validarEmail", async (req, res) => {
     try {
         const user = await prisma.user.findUnique({
             where: {
-                email: email,
-            },
+                email: email
+            }
         });
 
         if (!user || user.token !== token) {
@@ -77,8 +77,8 @@ routerUsersAPI.get("/validarEmail", async (req, res) => {
             where: { email: email },
             data: {
                 token: null,
-                verificado: true,
-            },
+                verificado: true
+            }
         });
 
         return res.status(200).json({ message: "Email validado com sucesso!" });
@@ -94,8 +94,8 @@ routerUsersAPI.post("/recuperarSenhaEmail", async (req, res) => {
     try {
         const user = await prisma.user.findUnique({
             where: {
-                email: email,
-            },
+                email: email
+            }
         });
 
         if (!user) {
@@ -107,8 +107,8 @@ routerUsersAPI.post("/recuperarSenhaEmail", async (req, res) => {
         await prisma.user.update({
             where: { email: email },
             data: {
-                token: RecToken,
-            },
+                token: RecToken
+            }
         });
 
         await transporter.sendMail({
@@ -116,7 +116,7 @@ routerUsersAPI.post("/recuperarSenhaEmail", async (req, res) => {
             to: email,
             subject: "Recuperção de senha",
             html: `Clique nesse link para redefinir sua senha: 
-            <a href="http://localhost:5173/NovaSenha?token=${RecToken}&email=${email}">Alterar senha</a>`,
+            <a href="http://localhost:5173/NovaSenha?token=${RecToken}&email=${email}">Alterar senha</a>`
         });
 
         res.status(200).json({ message: "Email enviado com sucesso!" });
@@ -139,8 +139,8 @@ routerUsersAPI.put("/redefinirSenha", async (req, res) => {
             where: { email },
             data: {
                 password: novaSenha,
-                token: null,
-            },
+                token: null
+            }
         });
 
         res.status(200).json({ message: "Senha alterada com sucesso!" });
@@ -159,8 +159,8 @@ routerUsersAPI.post("/autenticar", async (req, res) => {
     try {
         const user = await prisma.user.findUnique({
             where: {
-                email: email,
-            },
+                email: email
+            }
         });
 
         if (!user || user.password !== password) {
