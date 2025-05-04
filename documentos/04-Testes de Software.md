@@ -65,36 +65,297 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
   </tr>
 </table>
 
-## Parte 2 - Testes por pares
-
-A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade deve ser testada por um colega e os testes devem ser evidenciados. O colega "Tester" deve utilizar o caso de teste criado pelo desenvolvedor responsável pela funcionalidade (desenvolveu a funcionalidade e criou o caso de testes descrito no plano de testes).
-
-### Exemplo
-
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-001<br>Login com credenciais válidas</th>
+    <th colspan="6" width="1000">CT-003<br>Realizar registro do serviço</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
-    <td colspan="5">O sistema deve redirecionar o usuário para a página inicial do aplicativo após o login bem-sucedido.</td>
+    <td colspan="5">O sistema mostra uma mensagem de Serviço salvo com sucesso e o valor total.</td>
   </tr>
     <tr>
-    <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">José da Silva </td>
-      <td><strong>Responsável pelo teste</strong></td>
-    <td width="430">Maria Oliveira </td>
-     <td width="100"><strong>Data do teste</strong></td>
-    <td width="150">08/05/2024</td>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Caique R. Magalhães</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">02/05/2025</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">O sistema está permitindo o login corretamente.</td>
+    <td colspan="5">O sistema está salvando corretamente o serviço. E mostrando a mensaagem de Sucesso ao salvar o serviço.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
-    <td colspan="6" align="center"><video src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e5-proj-time-sheet/assets/82043220/2e3c1722-7adc-4bd4-8b4c-3abe9ddc1b48"/></td>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-004<br>Erros ao Salvar Serviços</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de falha</strong></td>
+    <td colspan="5">Erro ao salvar o serviço!, Verifique se o cliente já existe ou se os campos estão preenchidos corretamente.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Caique R. Magalhães</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">02/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema alerta com uma menssagem de erro, pedindo para verificar se os campos estão preenchidos corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-005<br>Realizar Cadastro de Clientes</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">Quando preenchido corretamente, o cliente será salvo e aparecerá em clientes cadastrados.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Caique R. Magalhães</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está salvando corretamente o cliente cadastrado.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-006<br>Erros ao Cadastrar Cliente</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de falha</strong></td>
+    <td colspan="5">Erro ao salvar o cliente, verifique se a campos em brancos antes de salvar.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Caique R. Magalhães</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema alerta com uma menssagem de erro, pedindo para verificar se os campos estão preenchidos corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-007<br>Teste da página de recibos</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve gerar um PDF para que o usuário possa enviar ao cliente a nota de serviço.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Davidson Marques</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O funcionamento da página está como o esperado e não apresentou erros nos testes.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-008<br>Erros ao Editar Valores</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de falha</strong></td>
+    <td colspan="5">Erro ao salvar valores!</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Márcio Emanuel Batista de Pádua</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema alerta com uma menssagem de erro, pedindo para verificar se os campos estão preenchidos corretamente respeitando os Datatypes corretos.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-009<br>Edição de Valores</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios do êxito</strong></td>
+    <td colspan="5">Edição de valores realizada, com o preenchimento de todos os campos corretamente.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">Márcio Emanuel Batista de Pádua</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está salvando corretamente o valor editado.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-010<br>Erros ao Editar Valores</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de falha</strong></td>
+    <td colspan="5">Erro ao salvar valores!</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">William Ribeiro Amaral</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema alerta com uma menssagem de erro.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-011<br>Edição de Valores</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios do êxito</strong></td>
+    <td colspan="5">Edição de serviço realizada, com o preenchimento de todos os campos corretamente.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">William Ribeiro Amaral</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está salvando corretamente o valor editado do serviço.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+## Parte 2 - Testes por pares
+
+A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade deve ser testada por um colega e os testes devem ser evidenciados. O colega "Tester" deve utilizar o caso de teste criado pelo desenvolvedor responsável pela funcionalidade (desenvolveu a funcionalidade e criou o caso de testes descrito no plano de testes).
+
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-001<br>Página Cliente</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema deve cadastrar os dados do usuário.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Caique Mgalhães </td>
+      <td><strong>Responsável pelo teste</strong></td>
+    <td width="430">Davidson Marques </td>
+     <td width="100"><strong>Data do teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está permitindo o cadastro dos dados do cliente corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-002<br>Página Formulário</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">O sistema conseguir localizar o cliente cadastrado juntamente com seus dados na página cliente, conseguir selecionar o serviço e também adicionar as quantidades solicitadas e salvar os dados inseridos.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Caique Mgalhães </td>
+      <td><strong>Responsável pelo teste</strong></td>
+    <td width="430">Davidson Marques </td>
+     <td width="100"><strong>Data do teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está permitindo inserir e salvar o serviço corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
   </tr>
 </table>

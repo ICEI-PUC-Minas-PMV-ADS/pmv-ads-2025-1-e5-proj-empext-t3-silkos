@@ -80,7 +80,7 @@ export default function FormularioPage() {
       console.log(response.data);
     } catch (err) {
       console.error('Erro ao salvar serviço:', err);
-      alert('Erro ao salvar o serviço!');
+      alert('Erro ao salvar o serviço!,\nVerifique se o cliente já existe ou se os campos estão preenchidos corretamente!');
     }
   };
 

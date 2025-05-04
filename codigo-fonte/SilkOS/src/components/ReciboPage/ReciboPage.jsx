@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import jsPDF from "jspdf";
-import "jspdf-autotable";
+import autoTable from "jspdf-autotable"; // ✅ Correção aqui
 import styles from './ReciboPage.module.css';
 import Navbar from '../Navbar/Navbar';
 import axios from "axios";
@@ -85,7 +85,7 @@ const ReciboPage = () => {
       `R$ ${service.valor.toFixed(2)}`,
     ]);
 
-    doc.autoTable({
+    autoTable(doc, {
       head: [["Nome Cliente", "Serviços Realizados", "Valor"]],
       body: tableData,
       startY: filtroNome.trim() ? 35 : 30,
@@ -126,7 +126,6 @@ const ReciboPage = () => {
         </label>
       </div>
 
-      {/* Filtro por nome */}
       <div style={{ textAlign: "center", marginBottom: "1rem" }}>
         <input
           type="text"
