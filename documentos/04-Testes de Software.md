@@ -448,7 +448,7 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
-    <td colspan="5">VEdição e exclusão dos serviços cadastrados na aplicação</td>
+    <td colspan="5">Edição e exclusão dos serviços cadastrados na aplicação</td>
   </tr>
     <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
