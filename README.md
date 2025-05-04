@@ -24,7 +24,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Instruções de utilização
 
-Eata sendo explicada no <li><a href="codigo-fonte/README.md"> Código Fonte</a></li>
+<li><a href="codigo-fonte/README.md"> Explicação </a></li>
 
 # Documentação
 
