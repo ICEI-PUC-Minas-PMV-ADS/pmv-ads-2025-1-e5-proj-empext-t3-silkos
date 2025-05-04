@@ -388,7 +388,7 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-002<br>Página de Orçamentos</th>
+    <th colspan="6" width="1000">CT-003<br>Página de Orçamentos</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
@@ -405,6 +405,34 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
     <tr>
     <td width="170"><strong>Comentário</strong></td>
     <td colspan="5">O sistema está permitindo salver e apagar os orçamentos corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-004<br>Página de Recibo</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">Vizualização e dos serviços gerados e geração de PDF, conforme a data e o CLiente pesquisado</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Davidson Marques</td>
+      <td><strong>Responsável pelo teste</strong></td>
+    <td width="430">Caique Magalhaes</td>
+     <td width="100"><strong>Data do teste</strong></td>
+    <td width="150">04/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está permitindo pesquisar e gerar o PDF corretamente. Não apresentou erro</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
