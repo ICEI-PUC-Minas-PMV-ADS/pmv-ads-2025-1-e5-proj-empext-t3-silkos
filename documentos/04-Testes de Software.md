@@ -299,6 +299,32 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-011<br>Edição de Valores</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios do êxito</strong></td>
+    <td colspan="5">Vizualização e controle sobre orçamentos</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pelo Teste</strong></td>
+    <td width="430">César Pereira dos Santos Filho</td>
+     <td width="100"><strong>Data do Teste</strong></td>
+    <td width="150">04/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está salvando corretamente o orçamento em pdf e permitindo o administrado/usuário apagar os respectivos.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
 ## Parte 2 - Testes por pares
 
 A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade deve ser testada por um colega e os testes devem ser evidenciados. O colega "Tester" deve utilizar o caso de teste criado pelo desenvolvedor responsável pela funcionalidade (desenvolveu a funcionalidade e criou o caso de testes descrito no plano de testes).
