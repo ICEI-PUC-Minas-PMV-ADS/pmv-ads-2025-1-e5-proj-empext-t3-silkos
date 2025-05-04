@@ -305,7 +305,7 @@ Cada funcionalidade desenvolvida deve ser testada utilizando os casos de testes 
   </tr>
   <tr>
     <td width="170"><strong>Critérios do êxito</strong></td>
-    <td colspan="5">Vizualização e controle sobre orçamentos</td>
+    <td colspan="5">Vizualização e controle sobre orçamentos.</td>
   </tr>
     <tr>
     <td><strong>Responsável pelo Teste</strong></td>
@@ -377,6 +377,34 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
     <tr>
     <td width="170"><strong>Comentário</strong></td>
     <td colspan="5">O sistema está permitindo inserir e salvar o serviço corretamente.</td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center"><strong>Evidência</strong></td>
+  </tr>
+  <tr>
+    <td colspan="6" align="center">VIDEO LOCALIZADO DENTRO DA PASTA VIDEOS EM DOCS</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="6" width="1000">CT-002<br>Página de Orçamentos</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">Vizualização e controle sobre orçamentos</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">Caique Mgalhães </td>
+      <td><strong>Responsável pelo teste</strong></td>
+    <td width="430">César Pereira dos Santos Filho</td>
+     <td width="100"><strong>Data do teste</strong></td>
+    <td width="150">03/05/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está permitindo salver e apagar os orçamentos corretamente.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
