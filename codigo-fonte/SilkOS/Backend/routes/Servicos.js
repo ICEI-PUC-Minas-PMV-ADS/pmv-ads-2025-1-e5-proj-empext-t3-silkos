@@ -141,4 +141,36 @@ routerServicos.delete("/:id", async (req, res) => {
   }
 });
 
+// Atualização parcial (PATCH)
+routerServicos.patch("/:id", async (req, res) => {
+  const { id } = req.params;
+  const {
+    servico1,
+    servico2,
+    quantidadeCor,
+    quantidadePeca,
+    valor,
+    data
+  } = req.body;
+
+  try {
+    const servicoAtualizado = await prisma.servico.update({
+      where: { id },
+      data: {
+        servico1,
+        servico2,
+        quantidadeCor,
+        quantidadePeca,
+        valor,
+        data: data ? new Date(data) : undefined
+      }
+    });
+
+    res.json(servicoAtualizado);
+  } catch (error) {
+    console.error("Erro ao atualizar parcialmente o serviço:", error);
+    res.status(500).json({ error: "Erro ao atualizar parcialmente o serviço" });
+  }
+});
+
 export default routerServicos;

@@ -42,14 +42,22 @@ export default function ServicosPage() {
 
   const handleSalvar = async (id) => {
     try {
-      await axios.put(`http://localhost:3000/servicos/${id}`, formData);
+      const payload = {
+        servico1: formData.servico1 || null,
+        servico2: formData.servico2 || null,
+        quantidadeCor: formData.quantidadeCor ? Number(formData.quantidadeCor) : 0,
+        quantidadePeca: formData.quantidadePeca ? Number(formData.quantidadePeca) : 0,
+        valor: formData.valor ? Number(formData.valor) : 0,
+        data: formData.data || null
+      };
+  
+      await axios.patch(`http://localhost:3000/servicos/${id}`, payload);
       setEditandoId(null);
       fetchServicos();
     } catch (err) {
       console.error('Erro ao salvar serviço:', err);
     }
   };
-
   const handleExcluir = async (id) => {
     try {
       await axios.delete(`http://localhost:3000/servicos/${id}`);
