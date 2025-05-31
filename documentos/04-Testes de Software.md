@@ -500,7 +500,7 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
 
 <table>
   <tr>
-    <th colspan="6" width="1000">CT-006<br>Página Editar Valores</th>
+    <th colspan="6" width="1000">CT-007<br>Página Editar Valores</th>
   </tr>
   <tr>
     <td width="170"><strong>Critérios de êxito</strong></td>
