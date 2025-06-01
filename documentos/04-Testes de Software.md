@@ -572,7 +572,7 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5"></td>
+    <td colspan="5">permitiu gerar PDFs e excluir orçamentos com sucesso.</td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
