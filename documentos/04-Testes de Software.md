@@ -575,6 +575,25 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
     <td colspan="5">permitiu gerar PDFs e excluir orçamentos com sucesso.</td>
   </tr>
   <tr>
+    <th colspan="6" width="1000">CT-010<br>Página de Recibo</th>
+  </tr>
+  <tr>
+    <td width="170"><strong>Critérios de êxito</strong></td>
+    <td colspan="5">Criação, edição e excluir Clientes.</td>
+  </tr>
+    <tr>
+    <td><strong>Responsável pela funcionalidade</strong></td>
+    <td width="430">César Pereira dos Santos Filho</td>
+      <td><strong>Responsável pelo teste</strong></td>
+    <td width="430">Caique Romero Magalhães</td>
+     <td width="100"><strong>Data do teste</strong></td>
+    <td width="150">01/06/2025</td>
+  </tr>
+    <tr>
+    <td width="170"><strong>Comentário</strong></td>
+    <td colspan="5">O sistema está permitindo a criação, edição e podendo fazer a exclusão de clientes.</td>
+  </tr>
+  <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
   </tr>
   <tr>
