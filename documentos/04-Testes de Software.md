@@ -564,15 +564,15 @@ A fim de aumentar a qualidade da aplicação desenvolvida, cada funcionalidade d
   </tr>
     <tr>
     <td><strong>Responsável pela funcionalidade</strong></td>
-    <td width="430">Davidson Marques</td>
+    <td width="430">Caique Romero Magalhaes</td>
       <td><strong>Responsável pelo teste</strong></td>
-    <td width="430">Márcio Emanuel Batista de Pádua</td>
+    <td width="430">William Ribeiro Amaral</td>
      <td width="100"><strong>Data do teste</strong></td>
-    <td width="150">31/05/2025</td>
+    <td width="150">01/06/2025</td>
   </tr>
     <tr>
     <td width="170"><strong>Comentário</strong></td>
-    <td colspan="5">O sistema está permitindo encontrar os recibos por nome e data além de gerar o PDF dos recibos.</td>
+    <td colspan="5"></td>
   </tr>
   <tr>
     <td colspan="6" align="center"><strong>Evidência</strong></td>
