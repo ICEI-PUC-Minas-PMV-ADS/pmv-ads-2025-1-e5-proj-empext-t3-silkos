@@ -1,29 +1,25 @@
-message: Please cite this software using these metadata.
-title:
+message: Sistema para geração e organização de nota de serviço.
+title: SilkOs
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Romero Magalhães
+    given-names: Caique
+  - family-names: Pereira dos Santos Filho
+    given-names: Cesar
+  - family-names: de Paiva Marques
+    given-names: Davidson
+  - family-names: Emanuel Batista de Pádua
+    given-names: Márcio
+  - family-names: Ribeiro Amaral
+    given-names: William
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Wilson Da Costa
+    given-names: José
 keywords:
-  - 
-  - 
-repository-code: 
+  - Nota
+  - Nota de Serviço
+  - Organização
+  - Documentação
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-1-e5-proj-empext-t3-silkos
 version: 1.0.0
-date-released: 2023-10-31
+date-released: 2025-06-11
