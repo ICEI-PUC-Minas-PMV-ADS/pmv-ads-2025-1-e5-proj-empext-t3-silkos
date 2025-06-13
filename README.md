@@ -34,6 +34,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 <li><a href="documentos/03-Projeto de Interface.md"> Projeto de Interface</a></li>
 <li><a href="documentos/04-Testes de Software.md"> Testes de Software</a></li>
 <li><a href="documentos/05-Implantação.md"> Implantação</a></li>
+<li><a href="/documentos/06-Relatorio Extensionista.md"> Relatorio de Extensão</a></li>
 </ol>
 
 # Código
