@@ -14,7 +14,6 @@ A implantação do sistema **SilkOS** foi planejada com foco em alta disponibili
   Utiliza **MongoDB Atlas**, uma solução de banco de dados NoSQL em nuvem, garantindo alta disponibilidade e escalabilidade dos dados.
 
 - **Outras tecnologias envolvidas:**
-  - **EmailJS** ou **Nodemailer** para envio de orçamentos por e-mail.
   - **jsPDF** e **jspdf-autotable** para geração de PDFs.
   - **Axios** para comunicação entre cliente e servidor.
 
